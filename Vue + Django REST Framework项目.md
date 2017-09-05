@@ -91,7 +91,7 @@ pip3 install -i https://pypi.douban.com/simple djangorestframework
 ```bash
 python manage.py startapp user
 python manage.py startapp trade
-python manage.py startapp 
+python manage.py startapp goods
 python manage.py startapp 
 ```
 
@@ -173,24 +173,6 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'223.74.34.112' IDENTIFIED BY '1234
 
 ```bash
 mysql> flush privileges;
-```
-
->开放3306端口
-
-```bash
-vim /etc/sysconfig/iptables
-```
-
->添加以下内容
-
-```bash
--A INPUT -p tcp -m state --state NEW -m tcp --dport 3306 -j ACCEPT
-```
-
->保存后重启防火墙：
-
-```bash
-service iptables restart
 ```
 
 >安装依赖包

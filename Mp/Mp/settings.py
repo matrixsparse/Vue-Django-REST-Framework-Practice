@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'Mp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "mxshop",
+        'NAME': "Mp",
         'USER': 'root',
-        'PASSWORD': "root",
-        'HOST': "	localhost",
+        'PASSWORD': "123456",
+        'HOST': "localhost",
         'OPTIONS': {'init_command': 'SET storage_engine=INNODB;'}
     }
 }

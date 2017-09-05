@@ -25,11 +25,11 @@ The key's randomart image is:
 ```bash
 点击右上角的 New SSH key 按钮，把 id_rsa.pub 公钥文件里的内容复制粘贴进去就可以了
 ```
-![](http://ww1.sinaimg.cn/large/dc05ba18gy1fj4zzz2e6ej21a80ewn00.jpg)
+![Alt text](http://ww1.sinaimg.cn/large/dc05ba18gy1fj4zzz2e6ej21a80ewn00.jpg)
 ```bash
 SSH key 添加成功之后，输入 ssh -T git@github.com 进行测试，如果出现以下提示证明添加成功了
 ```
-![](http://ww1.sinaimg.cn/large/dc05ba18gy1fj4zzzfnfwj21s00440wk.jpg)
+![Alt text](http://ww1.sinaimg.cn/large/dc05ba18gy1fj4zzzfnfwj21s00440wk.jpg)
 ```bash
 sparsematrix:~ matrix$ ssh -T git@github.com
 Warning: Permanently added the RSA host key for IP address '192.30.255.113' to the list of known hosts.

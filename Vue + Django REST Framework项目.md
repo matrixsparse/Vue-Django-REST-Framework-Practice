@@ -89,10 +89,10 @@ pip3 install -i https://pypi.douban.com/simple djangorestframework
 >创建目录
 
 ```bash
-python manage.py startapp user
+python manage.py startapp users
 python manage.py startapp trade
 python manage.py startapp goods
-python manage.py startapp 
+python manage.py startapp user_operation
 ```
 
 ### Centos7服务器环境配置
@@ -175,6 +175,14 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'223.74.34.112' IDENTIFIED BY '1234
 mysql> flush privileges;
 ```
 
+>手动安装mysqlclient
+
+```bash
+tar -zxvf mysqlclient-1.3.12.tar.gz -C ./
+cd mysqlclient-1.3.12
+python setup.py install
+```
+
 >安装依赖包
 
 ```bash
@@ -189,13 +197,64 @@ pip3 install -i https://pypi.douban.com/simple mysqlclient
 
 Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-2yKTjY/mysqlclient/
 
->手动安装mysqlclient
+```bash
+pip3 install django-cors-headers
+```
 
 ```bash
-tar -zxvf mysqlclient-1.3.12.tar.gz -C ./
-cd mysqlclient-1.3.12
-python setup.py install
+pip3 install -i https://pypi.douban.com/simple django-crispy-forms
 ```
+
+```bash
+pip3 install -i https://pypi.douban.com/simple django-import-export
+```
+
+```bash
+pip3 install -i https://pypi.douban.com/simple django-reversion
+```
+
+```bash
+pip3 install -i https://pypi.douban.com/simple django-formtools
+```
+
+```bash
+pip3 install -i https://pypi.douban.com/simple httplib2
+```
+
+```bash
+pip3 install -i https://pypi.douban.com/simple six
+```
+
+```bash
+pip3 install -i https://pypi.douban.com/simple xlwt xlsxwriter
+```
+
+>创建superuser
+
+```bash
+python manage.py createsuperuser
+Username: admin
+邮箱: xxxx@163.com
+Password: admin123
+Password (again): admin123
+Superuser created successfully.
+```
+
+### 启动Django项目
+
+```bash
+python manage.py runserver 服务器IP地址:5600
+```
+
+![Alt text](http://ww1.sinaimg.cn/large/dc05ba18gy1fjb6dehy88j211n0ddq39.jpg)
+
+![Alt text](http://ww1.sinaimg.cn/large/dc05ba18gy1fjb6f5gozxj210v0in40v.jpg)
+
+```bash
+输入创建superuser时设置的Username、Password
+```
+
+![](http://ww1.sinaimg.cn/large/dc05ba18gy1fjb6gx1kj0j21hc0cl0ta.jpg)
 
 ### 前后端分离优缺点
 
